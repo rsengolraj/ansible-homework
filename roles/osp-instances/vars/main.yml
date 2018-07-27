@@ -1,0 +1,10 @@
+---
+# vars file for osp-instances
+
+instance_info:
+  - { name: 'app1', group: 'apps', deployment: 'QA', flavor: 'm2.small', keypair: 'ansible_ssh', public: '10.10.10.0/24', private: '20.20.20.0/24', security_group: 'apps'}
+  - { name: 'app2', group: 'apps', deployment: 'QA', flavor: 'm2.small', keypair: 'ansible_ssh', public: '10.10.10.0/24', private: '20.20.20.0/24', security_group: 'apps'}
+  - { name: 'frontend', group: 'frontends', deployment: 'QA', flavor: 'm2.small', keypair: 'ansible_ssh', public: '10.10.10.0/24', private: '20.20.20.0/24', security_group: 'frontend'}
+  - { name: 'db', group: 'appdbs', deployment: 'QA', flavor: 'm2.small', keypair: 'ansible_ssh', public: '10.10.10.0/24', private: '20.20.20.0/24', security_group: 'db'}
+
+osp_instance_image: rhel-guest

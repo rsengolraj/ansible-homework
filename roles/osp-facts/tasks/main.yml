@@ -1,0 +1,12 @@
+---
+# tasks file for osp-facts
+
+- name: Gathering facts
+  os_server_facts:
+    cloud: ospcloud
+  register: result
+
+- add_host:
+    group: "{{ item.metadata.group }}"
+    name: "{{ item.public_v4 }}"
+  with_items: "{{ result.ansible_facts.openstack_servers }}"
